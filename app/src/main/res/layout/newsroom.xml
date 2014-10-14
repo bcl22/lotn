@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin">
+
+    <!-- title box -->
+
+    <TextView
+        android:id="@+id/newsroom_title_text"
+        android:text="Week 1 Newsroom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="#8888ee"
+        android:textStyle="bold|italic"
+        android:textSize="30dp"
+        android:textColor="#ffffff"
+        android:padding="10dp"/>
+
+    <TextView
+        android:id="@+id/newsroom_subtitle_text"
+        android:text="Select 4 stories then print paper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="15dp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:paddingTop="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/newsroom_title_text" />
+
+    <TextView
+        android:id="@+id/newsroom_timer_text"
+        android:text="00:00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/newsroom_subtitle_text" />
+
+    <!-- content goes here - dynamically -->
+    <LinearLayout
+        android:id="@+id/newsroom_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/newsroom_timer_text"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+        <!-- content goes here - dynamically -->
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/newsroom_selection_text"
+        android:text="0 out of 4 stories selected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/newsroom_content" />
+
+    <TextView
+        android:id="@+id/newsroom_timer_text2"
+        android:text="00:00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/newsroom_selection_text" />
+
+    <!-- Print button -->
+
+    <Button
+        android:id="@+id/newsroom_print_button"
+        android:text="Print paper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="#8888ee"
+        android:textStyle="bold|italic"
+        android:textSize="24dp"
+        android:textColor="#ffffff"
+        android:padding="10dp"
+        android:layout_below="@+id/newsroom_timer_text2"/>
+
+
+</RelativeLayout>

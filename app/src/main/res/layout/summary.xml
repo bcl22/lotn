@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".Summary">
+
+    <!-- title box -->
+
+    <TextView
+        android:id="@+id/summary_title_text"
+        android:text="Week 1 Summary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="#8888ee"
+        android:textStyle="bold|italic"
+        android:textSize="30dp"
+        android:textColor="#ffffff"
+        android:padding="10dp"/>
+
+
+    <!-- top level stats box -->
+
+    <TextView
+        android:id="@+id/summary_time_bonus"
+        android:text="Time bonus +100,000"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/summary_title_text"
+        android:layout_marginTop="20dp"
+        android:background="#aaaaaa"
+        android:textSize="15dp"
+        android:textColor="#000000"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"/>
+
+    <TextView
+        android:id="@+id/summary_story_selection"
+        android:text="Story selection +100,000"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#aaaaaa"
+        android:textSize="15dp"
+        android:textColor="#000000"
+        android:paddingTop="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_below="@+id/summary_time_bonus" />
+
+    <TextView
+        android:id="@+id/summary_readership"
+        android:text="Readership 1.2m"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#aaaaaa"
+        android:textSize="15dp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:paddingTop="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:layout_below="@+id/summary_story_selection" />
+
+
+    <!-- Poll box -->
+
+    <TextView
+        android:id="@+id/summary_poll_title"
+        android:text="Opinion polls"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#aaaaaa"
+        android:textSize="15dp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:paddingTop="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/summary_readership" />
+
+    <TableLayout
+        android:id="@+id/summary_poll_table"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/summary_poll_title"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#aaaaaa"
+        android:textSize="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp">
+
+        <!-- title row -->
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <TextView android:text=" " />
+            <TextView android:text="Vote share" android:gravity="center" android:layout_marginLeft="10dp"/>
+            <TextView android:text="Change" android:gravity="center" android:layout_marginLeft="10dp"/>
+            <TextView android:text="Seat prediction" android:gravity="center" android:layout_marginLeft="10dp"/>
+        </TableRow>
+
+        <!-- Conservative data -->
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <TextView android:text="Conservatives" />
+            <TextView android:text="33%" android:id="@+id/conservative_vote_share" android:gravity="center" android:layout_marginLeft="10dp" />
+            <TextView android:text="+1%" android:id="@+id/conservative_vote_change" android:gravity="center" android:layout_marginLeft="10dp" />
+            <TextView android:text="300" android:id="@+id/conservative_seat_prediction" android:gravity="center" android:layout_marginLeft="10dp"/>
+        </TableRow>
+
+        <!-- Labour data -->
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <TextView android:text="Labour" />
+            <TextView android:text="36%" android:id="@+id/labour_vote_share" android:gravity="center" android:layout_marginLeft="10dp" />
+            <TextView android:text="-1%" android:id="@+id/labour_vote_change" android:gravity="center" android:layout_marginLeft="10dp" />
+            <TextView android:text="280" android:id="@+id/labour_seat_prediction" android:gravity="center" android:layout_marginLeft="10dp"/>
+        </TableRow>
+
+        <!-- Lib-dem data -->
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <TextView android:text="Lib-dem" />
+            <TextView android:text="15%" android:id="@+id/libdem_vote_share" android:gravity="center" android:layout_marginLeft="10dp" />
+            <TextView android:text="-1%" android:id="@+id/libdem_vote_change" android:gravity="center" android:layout_marginLeft="10dp" />
+            <TextView android:text="30"  android:id="@+id/libdem_seat_prediction" android:gravity="center" android:layout_marginLeft="10dp"/>
+        </TableRow>
+
+        <!-- UKIP data -->
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <TextView android:text="UKIP" />
+            <TextView android:text="22%" android:id="@+id/ukip_vote_share" android:gravity="center" android:layout_marginLeft="10dp" />
+            <TextView android:text="+1%" android:id="@+id/ukip_vote_change" android:gravity="center" android:layout_marginLeft="10dp" />
+            <TextView android:text="5"   android:id="@+id/ukip_seat_prediction" android:gravity="center" android:layout_marginLeft="10dp"/>
+        </TableRow>
+
+    </TableLayout>
+
+
+    <!-- Update box -->
+
+    <TextView
+        android:id="@+id/summary_update_title"
+        android:text="Update"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#aaaaaa"
+        android:textSize="15dp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:paddingTop="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/summary_poll_table" />
+
+    <TextView
+        android:id="@+id/summary_update_text"
+        android:text="Text from David Cameron: thanks for the great coverage :-) LOL Dave"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#aaaaaa"
+        android:textSize="15dp"
+        android:textColor="#000000"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:layout_below="@+id/summary_update_title" />
+
+
+    <!-- Newsroom button -->
+
+    <Button
+        android:id="@+id/summary_newsroom_button"
+        android:text="Go to week 2 newsroom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="#8888ee"
+        android:textStyle="bold|italic"
+        android:textSize="24dp"
+        android:textColor="#ffffff"
+        android:padding="10dp"
+        android:layout_below="@+id/summary_update_text"/>
+
+</RelativeLayout>
